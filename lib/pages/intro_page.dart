@@ -11,13 +11,13 @@ class IntroPage extends StatelessWidget {
         body: SafeArea(
             child: Column(children: [
           Padding(
-            padding: const EdgeInsets.all(25),
+            padding: const EdgeInsets.all(35),
             child: Image.asset('lib/images/basketimg1.png'),
           ),
           const Padding(
             padding: EdgeInsets.all(28),
             child: Text(
-              "We deliver groceries at your doorstep",
+              "We deliver groceries at your doorstep!",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),
             ),
@@ -27,7 +27,6 @@ class IntroPage extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 16, color: Colors.grey[700]),
           ),
-          const SizedBox(height: 24),
           const Spacer(),
           GestureDetector(
             child: ElevatedButton(
@@ -42,13 +41,21 @@ class IntroPage extends StatelessWidget {
                 );
               },
               style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(Colors.blue[900]),
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                          15.0), // Adjust the radius as needed
+                    ),
+                  ),
+                  backgroundColor:
+                      const MaterialStatePropertyAll(Colors.lightGreen),
                   padding: const MaterialStatePropertyAll(
                       EdgeInsetsDirectional.symmetric(
                           horizontal: 35, vertical: 20))),
               child: const Text(
                 "Get Started",
-                style: TextStyle(color: Colors.white, fontSize: 16),
+                style: TextStyle(
+                    color: Color.fromARGB(255, 0, 72, 4), fontSize: 16),
               ),
             ),
           ),
